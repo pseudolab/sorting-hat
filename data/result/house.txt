@@ -1,0 +1,4 @@
+G#Gryffindor (그리핀도르)
+H#Hufflepuff (후플푸프)
+R#Ravenclaw (래번클로)
+S#Slytherin (슬리데린)

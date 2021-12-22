@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가짜연구소 호그와트 기숙사 테스트</title>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="static/js/test.js"></script>
+</head>
+<body>
+    <audio id="audioplayer" autobuffer="" loop="true" preload="auto" src="static/music/Hedwig's_Theme.mp3"></audio>
+    <script src="static/js/bgm.js"></script>
+
+    <div id="main">
+        <div id="prog_div">
+            <div id ="prog_bar">
+                <div id="prog_value"></div>
+            </div>
+            <div id="prog_text"></div>
+        </div>
+
+        <div id="qna_mask">
+            <ul id="qna_slider"></ul>
+            <button id="prev_btn" onclick="moveSlider(-1)">이전</button>
+        </div>
+    </div>
+</body>
+</html>
