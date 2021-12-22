@@ -3,4 +3,4 @@
 <br>
 
 ### Reference
-- HappyFaceFriend님의 심리 테스트](https://github.com/HappyFaceFriend/HappyFaceFriend.github.io)
+- [HappyFaceFriend님의 심리 테스트](https://github.com/HappyFaceFriend/HappyFaceFriend.github.io)
