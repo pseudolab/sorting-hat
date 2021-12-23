@@ -15,15 +15,33 @@
     <script src="static/js/bgm.js"></script>
 
     <div id="main">
-        <h2><p id="t1" class="scroll">당신의 기숙사는...</p></h2>
-        <h1><p id="t2" class="scroll">(기숙사)</p></h1>
+        <h2>
+            <p id="t1" class="scroll">당신의 기숙사는...</p>
+        </h2>
+        <h1>
+            <p id="t2" class="scroll">(기숙사)</p>
+        </h1>
         <img id="result_img" class="scroll" src="static/images/main.jpg">
-        <h2><p id="t3" class="scroll">(기숙사 한 줄)</p></h2>
-        <div>
-            <div id="feature"><p id="t4" class="scroll">(기숙사 설명)</p></div>
+        <h2>
+            <p id="t3" class="scroll">(기숙사 한 줄)</p>
+        </h2>
+        <div id="feature">
+            <p id="t4" class="scroll">(기숙사 설명)</p>
         </div>
 
-        <button id="restart_btn" class="scroll" onclick="window.location.href='./index.html'">다시하기</button>
+        <div>
+            <button id="join_btn" class="popup scroll" onclick="myFunction()">기숙사 들어가기
+                <span class="popuptext" id="myPopup">
+                    <p id="t5" class="scroll">(기숙사 들어가는 방법)</p>
+                    <img id="door_img" class="scroll" src="static/images/main.jpg">
+                </span>
+            </button>
+        </div>
+
+        <div>
+            <button id="restart_btn" class="scroll" onclick="window.location.href='./index.html'">다시하기</button>
+        </div>
+
     </div>
 </body>
 </html>

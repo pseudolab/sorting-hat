@@ -7,6 +7,7 @@ var result = null;
 var t2 = null;
 var feature = [];
 var house = null;
+var house_prefix = null;
 var result_img = null;
 
 var check = true;
@@ -18,13 +19,15 @@ function initElement() {
     t2 = document.getElementById("t2");
     t3 = document.getElementById("t3");
     t4 = document.getElementById("t4");
+    t5 = document.getElementById("t5");
     result_img = document.getElementById("result_img");
+    door_img = document.getElementById("door_img");
 }
 
 window.addEventListener('DOMContentLoaded', function () {
     initElement();
 
-    var house_prefix = window.location.hash.slice(1);
+    house_prefix = window.location.hash.slice(1);
     var house_feature = loadFile("result/" + house_prefix + ".txt");
     var house_result = loadFile("result/house.txt");
 
@@ -54,12 +57,27 @@ window.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < feature.length; i++)
         if (i == 0)
             moto_str = feature[i]
-    else {
-        feature_str += "<li class=\"scroll\">" + feature[i] + "</li>";
-    }
+        else {
+            feature_str += "<li class=\"scroll\">" + feature[i] + "</li>";
+        }
 
     t3.innerHTML = moto_str
     t4.innerHTML = feature_str;
+
+    var house_join = loadFile("result/" + house_prefix + "_join.txt");
+    var j_sen = house_join.split('\n');
+    var how_to_join = [];
+    var how_to_join_str = "";
+    for (var i = 0; i < j_sen.length; i++) {
+        if (j_sen[i] == '')
+            continue;
+        how_to_join.push(j_sen[i].slice(1));
+    }
+    for (var i = 0; i < how_to_join.length; i++)
+        how_to_join_str += "<li class='join_li'>" + how_to_join[i] + "</li>";
+    t5.innerHTML = how_to_join_str;
+
+    door_img.src = "static/images/" + house_prefix + "_door.png";    
 
     scroll_elements = Array.prototype.slice.call(document.getElementsByClassName("scroll"));
 });
@@ -89,46 +107,7 @@ window.onload = function () {
     checkScroll();
 };
 
-
-// function setCookie(c_name, value, exdays) {
-//     var exdate = new Date();
-//     exdate.setDate(exdate.getDate() + exdays);
-//     var c_value = escape(value) +
-//         ((exdays == null) ? "" : "; expires=" + exdate.toUTCString());
-//     document.cookie = c_name + "=" + c_value;
-// }
-
-// function getCookie(c_name) {
-//     var i, x, y, ARRcookies = document.cookie.split(";");
-//     for (i = 0; i < ARRcookies.length; i++) {
-//         x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
-//         y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
-//         x = x.replace(/^\s+|\s+$/g, "");
-//         if (x == c_name) {
-//             return unescape(y);
-//         }
-//     }
-// }
-
-// var song = document.getElementsByTagName('audio')[0];
-// var played = false;
-// var tillPlayed = getCookie('timePlayed');
-
-// function result_update() {
-//     if (!played) {
-//         if (tillPlayed) {
-//             song.currentTime = tillPlayed;
-//             played = true;
-//         } else {
-//             played = true;
-//         }
-//     } else {
-//         setCookie('timePlayed', song.currentTime);
-//     }
-// }
-
-// var currentUrl = window.location.href;
-// if (currentUrl.includes("result")) {
-//     setInterval(result_update, 1000);
-//     song.play();
-// }
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
