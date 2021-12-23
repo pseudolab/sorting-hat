@@ -143,6 +143,12 @@ function computeHouse() {
             s = house_data[h];
         }
     }
+
+    if (h == 'R') {
+        temp = ['G', 'H', 'S']
+        h = temp[Math.floor(Math.random()*temp.length)];
+    }
+    
     return h
 }
 
