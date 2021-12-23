@@ -198,6 +198,14 @@ button {
     cursor: pointer;
 }
 
+.highlight {
+    color: aqua;
+}
+
+#door_img {
+    width: 100%;
+}
+
 /* Popup container */
 .popup {
     position: relative;
@@ -206,16 +214,16 @@ button {
   
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    width: 300px;
+    width: 300%;
     visibility: hidden;
-    background-color: #555;
-    color: #fff;
+    background-color: #555555;
+    color: #ffffff;
     border-radius: 6px;
     padding: 15px 15px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 10%;
+    bottom: 140%;
+    left: 0%;
     margin-left: -80px;
 }
   
@@ -261,19 +269,15 @@ button {
     padding-left: 25px;
 }
 
-.highlight {
-    color: aqua;
-}
-
-#door_img {
-    width: 300px;
-}
-
 /* =================================== */
 /*                                     */
 /* =================================== */
 @media ( max-width: 768px ) {
     #sorting_hat img {
         width: 95%;
+    }
+
+    .popup .popuptext {
+        width: 300px;
     }
 }

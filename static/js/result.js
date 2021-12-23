@@ -96,7 +96,7 @@ function checkScroll() {
             setTimeout(function () {
                 check = true;
             }, 190);
-            setTimeout(checkScroll, 200);
+            setTimeout(checkScroll, 190);
             return;
         }
     }
@@ -107,7 +107,7 @@ window.onload = function () {
     checkScroll();
 };
 
-function myFunction() {
-    var popup = document.getElementById("myPopup");
+function showPopup() {
+    var popup = document.getElementById("join_popup");
     popup.classList.toggle("show");
 }
