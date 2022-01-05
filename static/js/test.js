@@ -129,29 +129,30 @@ function moveSlider(dir) {
 function computeHouse() {
     delete house_data['X'];
 
-    let h = 'G';
+    let h = 'H';
     let s = house_data[h];
     
-    for (const [key, value] of Object.entries(house_data)) {
-        if (s < value) {
-            h = key;
-            s = value;
-        }
-        else if (s == value) {
-            let temp = [h, key];
-            h = temp[Math.floor(Math.random()*temp.length)];
-            s = house_data[h];
-        }
-    }
+    // for (const [key, value] of Object.entries(house_data)) {
+    //     if (s < value) {
+    //         h = key;
+    //         s = value;
+    //     }
+    //     else if (s == value) {
+    //         let temp = [h, key];
+    //         h = temp[Math.floor(Math.random()*temp.length)];
+    //         s = house_data[h];
+    //     }
+    // }
 
-    if (h == 'R') {
-        temp = ['G', 'H', 'S']
-        h = temp[Math.floor(Math.random()*temp.length)];
-    }
+    // if (h == 'R') {
+    //     temp = ['G', 'H', 'S']
+    //     h = temp[Math.floor(Math.random()*temp.length)];
+    // }
     
     return h
 }
 
 function result(){
-    window.location.href = "result.html#" + house;
+    window.location.href = "result.html#" +
+     house;
 }
