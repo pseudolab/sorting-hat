@@ -132,22 +132,21 @@ function computeHouse() {
     let h = 'H';
     let s = house_data[h];
     
-    // for (const [key, value] of Object.entries(house_data)) {
-    //     if (s < value) {
-    //         h = key;
-    //         s = value;
-    //     }
-    //     else if (s == value) {
-    //         let temp = [h, key];
-    //         h = temp[Math.floor(Math.random()*temp.length)];
-    //         s = house_data[h];
-    //     }
-    // }
+    for (const [key, value] of Object.entries(house_data)) {
+        if (s < value) {
+            h = key;
+            s = value;
+        }
+        else if (s == value) {
+            let temp = [h, key];
+            h = temp[Math.floor(Math.random()*temp.length)];
+            s = house_data[h];
+        }
+    }
 
-    // if (h == 'R') {
-    //     temp = ['G', 'H', 'S']
-    //     h = temp[Math.floor(Math.random()*temp.length)];
-    // }
+
+    temp = ['R', 'G', 'H', 'S', h, h]
+    h = temp[Math.floor(Math.random()*temp.length)];
     
     return h
 }
