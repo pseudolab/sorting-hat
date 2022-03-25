@@ -87,7 +87,11 @@ button {
     transition: all 0.5s ease;
 }
 
-#qna_mask{
+#question {
+    text-align: left;
+}
+
+#qna_mask {
     width: 350px;
     overflow: hidden;
     margin: auto;
@@ -114,6 +118,7 @@ button {
     padding-bottom: 10px;
     font-size: 18px;
     border-width: 3px;
+    /* text-align: left; */
 }
 
 .mbti {

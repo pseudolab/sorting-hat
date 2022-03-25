@@ -65,14 +65,10 @@ window.addEventListener('DOMContentLoaded', function(){
         var html_data = "<li>"+
                     "<div id=\"question\"><h2>"+test_data[i][0]+"</h2></div>"+
                     "<div id=\"answer\">";
-        if (i == 0){
-            for (var j=1; j<test_data[i].length; j++)
-            html_data += "<button class=\"answers mbti\" id=\""+i+"_"+(j-1)+"\" onclick=\"selectAns("+i+","+(j-1)+")\">"+test_data[i][j][0]+"</button>";
-        }
-        else {
-            for (var j=1; j<test_data[i].length; j++)
+
+        for (var j=1; j<test_data[i].length; j++)
             html_data += "<button class=\"answers\" id=\""+i+"_"+(j-1)+"\" onclick=\"selectAns("+i+","+(j-1)+")\">"+test_data[i][j][0]+"</button>";
-        }
+                
         html_data +="</div></li>";
         slider.innerHTML += html_data;
     }
