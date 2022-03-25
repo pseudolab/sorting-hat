@@ -123,7 +123,7 @@ function moveSlider(dir) {
 }
 
 function computeHouse() {
-    delete house_data['X'];
+    // delete house_data['X'];
 
     let h = 'H';
     let s = house_data[h];
@@ -140,9 +140,8 @@ function computeHouse() {
         }
     }
 
-
-    temp = ['R', 'G', 'H', 'S', h, h]
-    h = temp[Math.floor(Math.random()*temp.length)];
+    // temp = ['R', 'G', 'H', 'S', h, h]
+    // h = temp[Math.floor(Math.random()*temp.length)];
     
     return h
 }
