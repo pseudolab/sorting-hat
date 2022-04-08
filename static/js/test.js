@@ -11,6 +11,7 @@ var house_data = {
     'H': 0,  // Hufflepuff
     'S': 0,  // Slytherin
 };
+var house_data_list = []
 var house = "";
 
 var ans_data = [];
@@ -114,7 +115,9 @@ function moveSlider(dir) {
 
         for (var i=0; i<ans_data.length; i++) {
             house_data[test_data[i][ans_data[i]+1][1]]++;
+            house_data_list.push(test_data[i][ans_data[i]+1][1])
         }
+        console.log(house_data_list)
     
         house = computeHouse();
         return;
@@ -125,20 +128,19 @@ function moveSlider(dir) {
 function computeHouse() {
     // delete house_data['X'];
 
-    let h = 'H';
-    let s = house_data[h];
+    let h = house_data_list[Math.floor(Math.random()*house_data_list.length)];
     
-    for (const [key, value] of Object.entries(house_data)) {
-        if (s < value) {
-            h = key;
-            s = value;
-        }
-        else if (s == value) {
-            let temp = [h, key];
-            h = temp[Math.floor(Math.random()*temp.length)];
-            s = house_data[h];
-        }
-    }
+    // for (const [key, value] of Object.entries(house_data)) {
+    //     if (s < value) {
+    //         h = key;
+    //         s = value;
+    //     }
+    //     else if (s == value) {
+    //         let temp = [h, key];
+    //         h = temp[Math.floor(Math.random()*temp.length)];
+    //         s = house_data[h];
+    //     }
+    // }
 
     // temp = ['R', 'G', 'H', 'S', h, h]
     // h = temp[Math.floor(Math.random()*temp.length)];
