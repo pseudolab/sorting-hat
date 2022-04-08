@@ -21,7 +21,7 @@ function initElement() {
     t4 = document.getElementById("t4");
     t5 = document.getElementById("t5");
     result_img = document.getElementById("result_img");
-    door_img = document.getElementById("door_img");
+    // door_img = document.getElementById("door_img");
 }
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
         how_to_join_str += "<li class='join_li'>" + how_to_join[i] + "</li>";
     t5.innerHTML = how_to_join_str;
 
-    door_img.src = "static/images/" + house_prefix + "_door.png";    
+    // door_img.src = "static/images/" + house_prefix + "_door.png";    
 
     scroll_elements = Array.prototype.slice.call(document.getElementsByClassName("scroll"));
 });
