@@ -126,7 +126,7 @@ function moveSlider(dir) {
 
 function computeHouse() {
     
-    house_data_list.push("H", "H", "H", "G", "G", "G", "R", "R", "R")
+    house_data_list.push("H", "H", "H", "H", "H", "G", "G", "G", "R", "S")
     let h = house_data_list[Math.floor(Math.random()*house_data_list.length)];
     
     return h
