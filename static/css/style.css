@@ -219,7 +219,7 @@ button {
   
 /* The actual popup (appears on top) */
 .popup .popuptext {
-    width: 300%;
+    width: 500px;
     visibility: hidden;
     background-color: #555555;
     color: #ffffff;
@@ -229,7 +229,7 @@ button {
     z-index: 1;
     bottom: 140%;
     left: 0%;
-    margin-left: -80px;
+    margin-left: -180px;
 }
   
 /* Popup arrow */
@@ -284,5 +284,6 @@ button {
 
     .popup .popuptext {
         width: 300px;
+        margin-left: -80px;
     }
 }
