@@ -115,7 +115,7 @@ function moveSlider(dir) {
 
         for (var i=0; i<ans_data.length; i++) {
             house_data[test_data[i][ans_data[i]+1][1]]++;
-            house_data_list.push(test_data[i][ans_data[i]+1][1])
+            // house_data_list.push(test_data[i][ans_data[i]+1][1])
         }
     
         house = computeHouse();
