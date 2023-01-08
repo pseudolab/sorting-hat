@@ -38,11 +38,18 @@ button {
 /*              index.html              */
 /* ==================================== */
 
+#alert {
+    padding: 20px 0 10px 0;
+    font-size: 40px;
+    color: red;
+}
+
 #letter {
     font-family: 'WandohopeB';
     font-size: 30px;
     margin: 4rem 0;
     text-align: center;
+    text-decoration: line-through;
 }
 
 #sorting_hat img {
@@ -57,6 +64,7 @@ button {
 #start_btn button {
     font-size: 24px;
     padding: 5px 15px;
+    text-decoration: line-through;
 }
 
 /* ===================================== */
